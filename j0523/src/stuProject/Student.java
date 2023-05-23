@@ -1,3 +1,4 @@
+package stuProject;
 
 public class Student {
 	
@@ -6,7 +7,7 @@ public class Student {
 	static int count=1000; //클래스변수 - 객체 선언 없이 클래스명.변수명
 	int stuNo; 			   //인스턴스변수 - 객체선언후 참조변수명.변수명
 	String name;
-	int kor;
+	public int kor;
 	int eng;
 	int math;
 	int total;
