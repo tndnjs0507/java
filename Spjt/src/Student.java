@@ -1,3 +1,4 @@
+
 public class Student {
 	
 	static String[] title = {"학번","이름","국어","영어","수학","합계","평균","등수"};
