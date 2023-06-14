@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<title>Insert title here</title>
+		<style>
+		   .main{width:800px; height:100px; border:2px solid black; margin:50px auto;}
+		   .sub{background:green; width:100px; height:100px; 
+		   position: relative; left:0;}
+		</style>
+		<script>
+		 $(function(){
+		  		let count=0;
+		  	$(".btn").click(function(){
+		  		count+=100;
+		  		if(count==800) count=0;
+		  		$(".sub").css({"left":count+"px"});
+		  	});
+		  }); 
+		</script>
+	</head>
+	<body>
+		<button class="btn">위치 이동</button>
+		<br>
+		<div class="main">
+		  <div class="sub"></div>
+		</div>
+	
+	</body>
+</html>
