@@ -4,7 +4,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
@@ -44,7 +43,7 @@ public class BoardDao {
 	
 	
 	//게시판리스트 메소드
-	public ArrayList<Board> selectBoard() {
+	public ArrayList<Board> selectAll() {
 		ArrayList<Board> list = new ArrayList<>();
 		try{
 	    	 conn = getConnection();
@@ -64,8 +63,7 @@ public class BoardDao {
 	    		 bfile = rs.getString("bfile");
 	    		 list.add(new Board(bno,id,btitle,bcontent,bdate,bhit,bgroup,bstep,bindent,bfile));
 	    	 }
-	    }catch(Exception e){
-	    	e.printStackTrace();
+	    }catch(Exception e){e.printStackTrace();
 	    }finally{
 	    	try{
 	    		if(rs!=null) rs.close();
